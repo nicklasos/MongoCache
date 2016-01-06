@@ -4,10 +4,10 @@
 $memcache = new Memcache();
 $memcache->connect('localhost', 11211);
 
-$mongo = new \Mongo\MongoDB(
-    new \MongoClient('mongodb://localhost:27017'),
+$mongo = new Mongo\MongoDB(
+    new MongoClient('mongodb://localhost:27017'),
     'dbName',
-    new \Mongo\Memcache(
+    new Mongo\Memcache(
         $memcache,
         60 * 30 // 30 mins
     )
