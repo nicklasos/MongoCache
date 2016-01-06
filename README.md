@@ -27,7 +27,6 @@ sleep(60 * 30 + 1);
 assert($collection->count() == 2);
 
 
-
 $collection->count(['foo' => 1], ['cache' => false]); // Ignore cache
 $collection->count(['foo' => 1], ['cacheTime' => 10]); // Cache result for 10 seconds
 ```
